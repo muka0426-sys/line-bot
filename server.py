@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-LINE_CHANNEL_ACCESS_TOKEN =pZSIi1xFujZuwgLBdoiM4HB+qAwCBfFlNA2t61Fz9itykvNdtxgPWzqcquXr6+CBZ96hUjE9tTkmReO4oF+SG1CT+T99O7OMQSM2psuMtkc6lzU9aeKi0veKWWVqj2ZK/2bEm/0kaNmsjoKi6tX/UgdB04t89/1O/w1cDnyilFU=
+LINE_CHANNEL_ACCESS_TOKEN ="pZSIi1xFujZuwgLBdoiM4HB+qAwCBfFlNA2t61Fz9itykvNdtxgPWzqcquXr6+CBZ96hUjE9tTkmReO4oF+SG1CT+T99O7OMQSM2psuMtkc6lzU9aeKi0veKWWVqj2ZK/2bEm/0kaNmsjoKi6tX/UgdB04t89/1O/w1cDnyilFU="
 
 # LINE webhook
 @app.route("/callback", methods=["POST"])
@@ -24,7 +24,7 @@ def callback():
 def reply_message(reply_token, text):
 headers = {
     "Content-Type": "application/json",
-    "Authorization": f"Bearer {LINE_CHANNEL_ACCESS_TOKEN}"
+   "Authorization": "Bearer " + LINE_CHANNEL_ACCESS_TOKEN
 }
 
     body = {
