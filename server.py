@@ -19,7 +19,7 @@ def ask_ai(user_msg):
     
     try:
         genai.configure(api_key=GEMINI_KEY)
-        model = genai.GenerativeModel("gemini-1.5-flash")
+       model = genai.GenerativeModel("gemini-pro")
         prompt = f"你是派單系統，只能輸出JSON。使用者輸入：{user_msg}。輸出格式：{{'action': 'create_order'}}"
         
         response = model.generate_content(prompt)
