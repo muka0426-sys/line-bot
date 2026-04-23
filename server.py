@@ -22,10 +22,10 @@ def callback():
 
 
 def reply_message(reply_token, text):
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {LINE_CHANNEL_ACCESS_TOKEN}"
-    }
+headers = {
+    "Content-Type": "application/json",
+    "Authorization": f"Bearer {LINE_CHANNEL_ACCESS_TOKEN}"
+}
 
     body = {
         "replyToken": reply_token,
